@@ -41,7 +41,7 @@ jobs:
 
       - name: Generate a changelog
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
-        run: git cliff --unreleased --strip header
+        run: git cliff --latest --strip header
 
       # - name: Release
       #   uses: softprops/action-gh-release@v1
